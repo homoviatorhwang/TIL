@@ -15,7 +15,7 @@ new Vue({
 })
 ```
 
-```java
+```javascript
 new VueRouter({
     mode : 'history' // mode에 history 넣으면 #을 안 써도 됌, 좀 더 깔끔한 url
     routes: [
