@@ -1,33 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> 
-    <!-- 파스칼 케이스 : 단어가 연결될 때 단어의 앞글자를 대문자로 표현 -->
-    <!-- 컴포넌트 태그를 등록한 것과 같음 -->
-    <hello-world></hello-world>
-    <HelloWorld></HelloWorld>
-    <HelloWorld/>
+  <!-- html 태그는 하나만 잇어야 함 -->
+  <!-- 밑에 div를 또 넣으려고 하면 에러가 날거임 -->
+  <div>
+   <app-header></app-header>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AppHeader from './components/AppHeader.vue'
+// 컴포넌트의 내용을 정의하고 변수로 정의
+// var AppHeader = {
+//   template: '<header><h1>Header</h1></header>'
+// } 라는 뜻임
 export default {
-  name: 'App',
-  components: {
-    HelloWorld // 'hello-world': HelloWorld 라는 뜻임
+  data: function(){
+    return {
+      str: 'hi'
+    }
+  },
+  components:{
+    'app-header':AppHeader
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
