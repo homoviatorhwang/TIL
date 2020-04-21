@@ -19,3 +19,7 @@ npm run serve = vue-cli-service serve 임
 vue 파일 만든 다음에 에디터에서 vue 입력 후 엔터
 또는
 vu 입력 후 tab 입력
+
+vue-cli 로 이동하여서
+npm run serve 실행
+ctrl + c 하면 서버 종료
